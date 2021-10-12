@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kog'Maw</title>
+        <link rel="stylesheet" type="text/css" href="Styles/style-kog.css">
+    </head>
+    <body>
+        <header>
+            <a href="https://www.leagueoflegends.com/cs-cz/champions/kog-maw/" class="logo">Kog'Maw</a>
+            <ul>
+                <li><a href="index.html" >Domů</a></li>
+                <li><a href="seznam.html">seznam</a></li>
+                <li><a href="https://www.leagueoflegends.com/cs-cz/how-to-play/?_gl=1*1852ztu*_ga*MTEyMjUwNzA5MS4xNjMzOTY0Mzk3*_ga_FXBJE5DEDD*MTYzMzk2NDM5Ni4xLjEuMTYzMzk2NTc5MS42MA..">Kontakt</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="pic/kogmaw/pozadi.png" id="pozadi">
+            <img src="pic/kogmaw/musky.png" id="stars">
+            <img src="pic/kogmaw/kogmaw.png" id="kogmaw">
+            
+            <h2 id="text">Kog'Maw</h2>
+            <img src="pic/kogmaw/strom_Right.png" id="strom_right">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Informace o šampionovi</h2>
+            <p>
+                Kog'Maw,<br><br>
+                jehož vyvrhla hnijící trhlina do Prázdnoty v pustinách Ikacie, 
+                je zvídavý, byť hnilobou prolezlý tvor s obřím chřtánem plným žíravých slin. 
+                <br>Chce-li toto stvoření z Prázdnoty něčemu ve svém okolí skutečně porozumět, musí to přežvýkat a oslintat. 
+                Kog'Maw sice není sám o sobě zlý, ovšem ve své všetečné naivitě dokáže být nebezpečný,
+                <br> neboť ta může vyústit ve zběsilou žravost – ne snad kvůli hladu, nýbrž aby ukojil svou bezmeznou zvědavost.
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById("stars");
+            let kogmaw = document.getElementById("kogmaw"); 
+            let strom_left = document.getElementById("strom_left");  
+            let text = document.getElementById("text");
+            let strom_right = document.getElementById("strom_right");
+            let header =  document.querySelector("header");
+
+            window.addEventListener("scroll",function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + "px";
+                kogmaw.style.marginRight = value * 2.5 + "px";
+                kogmaw.style.marginTop = value * 0.5 + "px";
+                
+                strom_right.style.marginLeft = value * 9 + "px";
+                text.style.marginRight = value * 2.5 + "px";
+                text.style.marginTop = value * 1 + "px";
+                header.style.top = value * 0.5 + "px";
+            })
+        </script>
+    </body>
+</html>

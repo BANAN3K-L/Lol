@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Informace o hře LOL</title>
+        <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    </head>
+    <body>
+        <header>
+            <a href="https://www.leagueoflegends.com/cs-cz/?_gl=1*78ap0v*_ga*MTEyMjUwNzA5MS4xNjMzOTY0Mzk3*_ga_FXBJE5DEDD*MTYzMzk2NDM5Ni4xLjEuMTYzMzk2NTc5MS42MA.." class="logo">LOL</a>
+            <ul>
+                <li><a href="index.html" class="active">Domů</a></li>
+                <li><a href="seznam.html">seznam</a></li>
+                <li><a href="https://www.leagueoflegends.com/cs-cz/how-to-play/?_gl=1*1852ztu*_ga*MTEyMjUwNzA5MS4xNjMzOTY0Mzk3*_ga_FXBJE5DEDD*MTYzMzk2NDM5Ni4xLjEuMTYzMzk2NTc5MS42MA..">Kontakt</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="pic/stars.png" id="stars">
+            <img src="pic/lolisek.png" id="lol_logo">
+            <img src="pic/hory-vzad.png" id="hory_vzad">
+            <h2 id="text">League of Legends</h2>
+            <img src="pic/hory-vpred.png" id="hory_vpred">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Informace o hře</h2>
+            <p>
+                League of Legends je týmová strategická hra, 
+                ve které dvě pětičlenná družstva mocných šampionů bojují o to, 
+                kdo jako první zničí nepřátelskou základnu. Vyber si z více než 140 šampionů, 
+                prováděj dechberoucí akce, sbírej zářezy, srovnávej věže se zemí a vybojuj si vítězství.
+                <br><br>Nexus je srdcem základen obou týmů. Zvítězíš, když tvůj tým dokáže zničit nepřátelský nexus jako první.
+                <br><br>Aby se tvůj tým dostal k nepřátelskému nexusu, musí pročistit alespoň jednu lajnu. 
+                Cestu ti blokují obranné budovy – věže a inhibitory. 
+                V každé lajně se nacházejí tři věže a jeden inhibitor, samotný nexus pak chrání dvojice věží.
+                <br><br>
+                Síla šampionů se zvyšuje získáváním zkušeností, které slouží k postupu na vyšší úrovně, a zlaťáků, 
+                za něž si můžeš v průběhu zápasu pořizovat mocnější předměty. 
+                Soustředit se na tyto dva klíčové faktory je nezbytné pro přemožení nepřátelského týmu a zničení jeho základny.
+                <br><br>
+                Šampioni mají pět základních schopností, dvě speciální kouzla a až sedm předmětů zároveň. 
+                Nalezení optimálního pořadí schopností, vyvolávačových kouzel a kombinace předmětů pro tvého šampiona dopomůže tvému týmu k úspěchu.
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById("stars");
+            let lol_logo = document.getElementById("lol_logo"); 
+            let hory_vzad = document.getElementById("hory_vzad");  
+            let text = document.getElementById("text");
+            let hory_vpred = document.getElementById("hory_vpred");
+            let header =  document.querySelector("header");
+
+            window.addEventListener("scroll",function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + "px";
+                lol_logo.style.top = value * 1.05 + "px";
+                hory_vzad.style.top = value * 0.5 + "px";
+                hory_vpred.style.top = value * 0 + "px";
+                text.style.marginRight = value * 2.5 + "px";
+                text.style.marginTop = value * 1 + "px";
+                header.style.top = value * 0.5 + "px";
+            })
+        </script>
+    </body>
+</html>

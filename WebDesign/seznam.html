@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Seznam Šampionů</title>
+        <link rel="stylesheet" type="text/css" href="Styles/style.css">
+        <link rel="stylesheet" type="text/css" href="Styles/style_seznam.css">
+    </head>
+    <body>
+        <header>
+            <a href="https://www.leagueoflegends.com/cs-cz/champions/?_gl=1*1idfgoe*_ga*MTEyMjUwNzA5MS4xNjMzOTY0Mzk3*_ga_FXBJE5DEDD*MTYzMzk2NDM5Ni4xLjEuMTYzMzk2NTc5MS42MA.." class="logo">CHAMPS</a>
+            <ul>
+                <li><a href="index.html" >Domů</a></li>
+                <li><a href="seznam.html" class="active">seznam</a></li>
+                <li><a href="https://www.leagueoflegends.com/cs-cz/how-to-play/?_gl=1*1852ztu*_ga*MTEyMjUwNzA5MS4xNjMzOTY0Mzk3*_ga_FXBJE5DEDD*MTYzMzk2NDM5Ni4xLjEuMTYzMzk2NTc5MS42MA..">Kontakt</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="pic/stars.png" id="stars">
+            <img src="pic/seznam.png" id="seznam_logo">
+            <img src="pic/hory-vzad.png" id="hory_vzad">
+            <h2 id="text">Champions</h2>
+            <img src="pic/hory-vpred.png" id="hory_vpred">
+        </section>
+
+        <div class="sec" id="sec">
+            <h2>Seznam</h2>
+            <li><a href="Kaisa.html">KAISA</a></li>
+            <li><a href="Kogmaw.html">Kogmaw</a></li>
+            <li><a href="pyke.html">Pyke</a></li>
+            
+        </div>
+        
+        <script>
+            let stars = document.getElementById("stars");
+            let seznam_logo = document.getElementById("seznam_logo"); 
+            let hory_vzad = document.getElementById("hory_vzad");  
+            let text = document.getElementById("text");
+            let hory_vpred = document.getElementById("hory_vpred");
+            let header =  document.querySelector("header");
+
+            window.addEventListener("scroll",function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + "px";
+                seznam_logo.style.top = value * 1.05 + "px";
+                hory_vzad.style.top = value * 0.5 + "px";
+                hory_vpred.style.top = value * 0 + "px";
+                text.style.marginRight = value * 2.5 + "px";
+                text.style.marginTop = value * 1 + "px";
+                header.style.top = value * 0.5 + "px";
+            })
+        </script>
+    </body>
+</html>

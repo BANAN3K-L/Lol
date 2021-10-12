@@ -1,0 +1,22 @@
+
+div li{
+    display:flex;
+    list-style: none;
+    margin-left:20px;
+    align-items:center;
+    justify-content: center;
+
+}
+div li a{
+    color:white;
+    font-size: 2em;
+    position: relative;
+    padding: 6px 15px;
+    text-decoration: none;
+    border-radius: 40px;
+    align-items: center;
+}
+div li a:hover{
+    background:white;
+    color: #2b1055;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pyke</title>
+        <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    </head>
+    <body>
+        <header>
+            <a href="https://www.leagueoflegends.com/cs-cz/champions/pyke/" class="logo">Pyke</a>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="seznam.html">seznam</a></li>
+                <li><a href="https://www.leagueoflegends.com/cs-cz/how-to-play/?_gl=1*1852ztu*_ga*MTEyMjUwNzA5MS4xNjMzOTY0Mzk3*_ga_FXBJE5DEDD*MTYzMzk2NDM5Ni4xLjEuMTYzMzk2NTc5MS42MA..">Kontakt</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="pic/pyke/pozadi.png" id="pozadi">
+            <img src="pic/pyke/bubbles.png" id="bubbles">
+            <img src="pic/pyke/pyke.png" id="pyke">
+            
+            <h2 id="text">Pyke</h2>
+           
+        </section>
+        <div class="sec" id="sec">
+            <h2>Informace o šampionovi</h2>
+            <p>
+                Proslulý harpunář Pyke z bilgewaterských Vražedných doků měl najít smrt v břiše obří žravuchy… 
+                <br>ale přesto se vrátil. 
+                Nyní se plíží vlhkými uličkami a průchody města, jež mu dříve bylo domovem, a používá své nově nabyté nadpřirozené dary k tomu, 
+                aby rychle a krvavě skoncoval s každým, kdo vydělává na zneužívání slabosti ostatních. 
+                <br><br>Ve městě obývaném hrdými lovci příšer se náhle objevila příšera, která loví je.
+            </p>
+        </div>
+
+        <script>
+            let bubbles = document.getElementById("bubbles");
+            let pyke = document.getElementById("pyke"); 
+            let hory_vzad = document.getElementById("hory_vzad");  
+            let text = document.getElementById("text");
+            
+            let header =  document.querySelector("header");
+
+            window.addEventListener("scroll",function(){
+                let value = window.scrollY;
+                bubbles.style.left = value * 0.25 + "px";
+                pyke.style.top = value * 1.05 + "px";
+    
+                
+                text.style.marginRight = value * 2.5 + "px";
+                text.style.marginTop = value * 1 + "px";
+                header.style.top = value * 0.5 + "px";
+            })
+        </script>
+    </body>
+</html>

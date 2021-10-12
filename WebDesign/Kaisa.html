@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kai'Sa</title>
+        <link rel="stylesheet" type="text/css" href="Styles/style.css">
+    </head>
+    <body>
+        <header>
+            <a href="https://www.leagueoflegends.com/cs-cz/?_gl=1*78ap0v*_ga*MTEyMjUwNzA5MS4xNjMzOTY0Mzk3*_ga_FXBJE5DEDD*MTYzMzk2NDM5Ni4xLjEuMTYzMzk2NTc5MS42MA.." class="logo">Kai'Sa</a>
+            <ul>
+                <li><a href="index.html" >Domů</a></li>
+                <li><a href="seznam.html">seznam</a></li>
+                <li><a href="https://www.leagueoflegends.com/cs-cz/how-to-play/?_gl=1*1852ztu*_ga*MTEyMjUwNzA5MS4xNjMzOTY0Mzk3*_ga_FXBJE5DEDD*MTYzMzk2NDM5Ni4xLjEuMTYzMzk2NTc5MS42MA..">Kontakt</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="pic/kaisa/pozadi.png" id="pozadi">
+            <img src="pic/kaisa/stars.png" id="stars">
+            <img src="pic/kaisa/kaisa.png" id="kaisa">
+            <img src="pic/kaisa/mlha.png" id="mlha">
+            <h2 id="text">Kai'Sa</h2>
+            
+        </section>
+        <div class="sec" id="sec">
+            <h2>Informace o šampionovi</h2>
+            <p>
+                Kai'Sa, kterou Prázdnota pohltila, 
+                když byla sotva ještě dítě, dokázala přežít díky prosté houževnatosti a síle vůle. 
+                <br>Její zkušenosti z ní učinily smrtící lovkyni a podle některých i posla budoucnosti, 
+                které by se raději nedožili. Jelikož navázala nelehký symbiotický vztah s živoucím krunýřem z Prázdnoty, 
+                brzy nadejde čas, kdy se bude muset rozhodnout, jestli odpustí těm smrtelníkům, 
+                kteří ji považují za zrůdu, a vyrazí s nimi proti blížící se temnotě společně... 
+                <br><br>anebo zda prostě zapomene a nechá Prázdnotu pohltit svět, který se k ní otočil zády.
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById("stars");
+            let kaisa = document.getElementById("kaisa"); 
+            let mlha = document.getElementById("mlha");  
+            let text = document.getElementById("text");
+            
+            let header =  document.querySelector("header");
+
+            window.addEventListener("scroll",function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + "px";
+                kaisa.style.top = value * 1.05 + "px";
+                mlha.style.top = value * 0.5 + "px";
+                
+                text.style.marginRight = value * 2.5 + "px";
+                text.style.marginTop = value * 1 + "px";
+                header.style.top = value * 0.5 + "px";
+            })
+        </script>
+    </body>
+</html>
